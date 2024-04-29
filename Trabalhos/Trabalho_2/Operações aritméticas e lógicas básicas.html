@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Operações aritméticas e lógicas básicas</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="Opera%C3%A7%C3%B5es%20aritm%C3%A9ticas%20e%20l%C3%B3gicas%20b%C3%A1sicas_files/pandoc.css">
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Operações aritméticas e lógicas básicas</h1>
+</header>
+<p>Como um primeiro contato neste mundo de programação, convidamos você a testar as operações aritméticas e lógicas básicas.</p>
+<p>Para este problema, você deve implementar um programa que leia três números <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a, b</annotation></semantics></math> e <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math>, menores que 255, a partir do terminal e</p>
+<ol type="1">
+<li><p>faça as operações aritméticas básicas de <em>soma</em> e <em>subtração</em> entre <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math> e <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>,</p></li>
+<li><p>faça as operações lógicas básicas <em>and</em>, <em>or</em> e <em>xor</em> entre <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math> e <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>,</p></li>
+<li><p>faça um <em>and</em> entre <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math> e <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>31</mn><annotation encoding="application/x-tex">31</annotation></semantics></math> (chamamos essa operação de máscara entre <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math> e 31, e denotaremos por <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>) e</p></li>
+<li><p>faça o <em>deslocamento</em> de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math> bits à esquerda de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math> e o <em>deslocamento</em> de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math> bits à direita de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>.</p></li>
+</ol>
+<h2 id="entrada">Entrada</h2>
+<p>A entrada é composta por dois números inteiros <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>N</mi><mn>1</mn></msub><mo>,</mo><msub><mi>N</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">N_1, N_2</annotation></semantics></math> ( <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>≤</mo><msub><mi>N</mi><mn>1</mn></msub><mo>,</mo><msub><mi>N</mi><mn>2</mn></msub><mo>≤</mo><mn>255</mn></mrow><annotation encoding="application/x-tex">0 \leq N_1,N_2 \leq 255</annotation></semantics></math> ).</p>
+<h2 id="saída">Saída</h2>
+<p>A saída é composta das operações pedidas no enunciado, veja alguns exemplos abaixo.</p>
+<h3 id="exemplo-de-entrada">Exemplo de Entrada</h3>
+<pre><code>9
+2
+36</code></pre>
+<h3 id="exemplo-de-saída">Exemplo de Saída</h3>
+<pre><code>ADD: 11
+SUB: 7
+AND: 0
+OR: 11
+XOR: 11
+MASK: 4
+SLL(4): 144
+SRL(4): 0</code></pre>
+<h3 id="exemplo-de-entrada-1">Exemplo de Entrada</h3>
+<pre><code>15
+4
+2</code></pre>
+<h3 id="exemplo-de-saída-1">Exemplo de Saída</h3>
+<pre><code>ADD: 19
+SUB: 11
+AND: 4
+OR: 15
+XOR: 11
+MASK: 2
+SLL(2): 60
+SRL(2): 1</code></pre>
+<div id="footer">
+<p>Author: Tiago Alves</p>
+</div>
+
+
+</body></html>

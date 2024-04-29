@@ -1,0 +1,34 @@
+.data
+	fim:	.string	"/n"
+.text
+main:
+	li a7, 5	# flag da syscall setada para 5 (ler um inteiro)
+	ecall		# chamada de sistema para ler um inteiro e salva-lo em a0
+	mv t0, a0	# t0 = a0
+	li a7, 5	# flag da syscall setada para 5 (ler um inteiro)
+	ecall		# chamada de sistema para ler um inteiro e salva-lo em a0
+	mv t2, a0	# t2 = a0
+	addi t0, t0, -1	# t0--
+loop:
+	li a7, 5	# flag da syscall setada para 5 (ler um inteiro)
+	ecall		# chamada de sistema para ler um inteiro e salva-lo em a0
+	mv t1, a0	# t1 = a0
+	blt t2, t1, result # if(t2 < t1) --> result
+result:
+	mv t2, t1	# t2 = t1
+sub_n:
+	addi t0, t0, -1	# t0--
+	bne t0, zero, loop # if(t0 != 0) --> loop
+end:
+	li a7, 1	# flag da syscall setada para 1 (escrever inteiro)
+	mv a0, t2	# a0 = t2
+	ecall		# chamada de sistema para escrever um inteiro registrado em a0
+	
+	la a0 , fim	# a0 = &fim
+	li a7 , 4	# flag da syscall setada para escrever uma string
+	ecall		# chamada de sistema para escrever a string em a0
+	
+	
+	li a7, 10	# flag da syscall setada para 10 (sair do programa retornando 0)
+	ecall		# return 0
+	
